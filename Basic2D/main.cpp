@@ -243,6 +243,20 @@ LRESULT CALLBACK WndProc(	HWND	hWnd,			// Handle For This Window
 			return 0;								      // Return To The Message Loop
 		}
 
+		case WM_MOUSEMOVE:
+		{
+			POINTS p;
+			p = MAKEPOINTS(lParam);
+			Data.cx = p.x; Data.cy = p.y;
+			if (Data.IsInClient(p.x, p.y)) {
+				if (!Data.captured) { Data.captured = true; SetCapture(hWnd); ShowCursor(FALSE); }
+			}
+			else {
+				if (Data.captured) { Data.captured = false; ReleaseCapture(); ShowCursor(TRUE); }
+			}
+		}
+		break;
+
 		case WM_SYSCOMMAND:							// Intercept System Commands
 		{
 			switch (wParam)							// Check System Calls

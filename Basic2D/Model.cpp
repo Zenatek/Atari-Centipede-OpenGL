@@ -87,7 +87,7 @@ bool MyModel::LoadGLTextures(void)
 	("../Data/ship.png",
 		SOIL_LOAD_AUTO, SOIL_CREATE_NEW_ID, SOIL_FLAG_INVERT_Y);
 
-	if (texture[0] == 0) return false;
+	if (texture[1] == 0) return false;
 
    // Load animation
   //char ll[200];
@@ -164,6 +164,40 @@ bool MyModel::DrawGLScene(void)
 
   glDisable(GL_BLEND);
   glDisable(GL_ALPHA_TEST);
+
+  //  Floating cursor - start
+  glEnable(GL_BLEND);
+  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+  glEnable(GL_ALPHA_TEST);
+  glAlphaFunc(GL_GREATER, 0);
+  glMatrixMode(GL_MODELVIEW);				// Select The Modelview Matrix
+  glLoadIdentity();									// Reset The View
+
+//  Disable texture to see the rectangle size
+//  The cursor "hot spot" is the center of the rectangle
+// glDisable(GL_TEXTURE_2D);
+
+  glTranslatef(ClientX2World(cx), ClientY2World(cy), 0);
+  // proportional scaling (fixed percentual of window dimension)
+  // if(1) proportional, if(0) fixed
+  if (1) glScalef(0.20f, 0.20f, 0.20f);    // 1- scale the ship
+  //  Fixed scaling, alwais 100 pixels width/height
+  else {
+	  float dx = PixToCoord_X(100);
+	  float dy = PixToCoord_Y(100);
+	  glScalef(dx / 2, dy / 2, 1);
+  }
+
+  glBegin(GL_QUADS);
+  for (int i = 0; i < 4; i++) {
+	  glTexCoord2f(curs[i].u, curs[i].v);
+	  glVertex3f(curs[i].x, ship[i].y, curs[i].z);
+  }
+  glEnd();
+
+  glDisable(GL_BLEND);
+  glDisable(GL_ALPHA_TEST);
+  //  Floating cursor - end
 
   //  Some text
  // glMatrixMode(GL_MODELVIEW);				// Select The Modelview Matrix

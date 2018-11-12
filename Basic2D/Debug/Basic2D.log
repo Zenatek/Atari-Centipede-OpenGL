@@ -1,9 +1,5 @@
-﻿  main.cpp
-c:\users\rootx86\desktop\computer graphics\cendipede\centipede\basic2d\main.cpp(176): warning C4838: la conversione da 'int' a 'BYTE' richiede una conversione verso un tipo di dati più piccolo
-  Model.cpp
+﻿  Model.cpp
+  main.cpp
+c:\users\rootx86\desktop\computer graphics\atari-centipede-opengl-master\basic2d\main.cpp(176): warning C4838: la conversione da 'int' a 'BYTE' richiede una conversione verso un tipo di dati più piccolo
   Generazione del codice in corso...
-SOIL.lib(image_DXT.obj) : warning LNK4099: impossibile trovare il PDB 'vc100.pdb' con 'SOIL.lib(image_DXT.obj)' o in 'C:\Users\Rootx86\Desktop\Computer Graphics\Cendipede\Centipede\Debug\vc100.pdb'; oggetto collegato senza informazioni di debug
-SOIL.lib(image_helper.obj) : warning LNK4099: impossibile trovare il PDB 'vc100.pdb' con 'SOIL.lib(image_helper.obj)' o in 'C:\Users\Rootx86\Desktop\Computer Graphics\Cendipede\Centipede\Debug\vc100.pdb'; oggetto collegato senza informazioni di debug
-SOIL.lib(SOIL.obj) : warning LNK4099: impossibile trovare il PDB 'vc100.pdb' con 'SOIL.lib(SOIL.obj)' o in 'C:\Users\Rootx86\Desktop\Computer Graphics\Cendipede\Centipede\Debug\vc100.pdb'; oggetto collegato senza informazioni di debug
-SOIL.lib(stb_image_aug.obj) : warning LNK4099: impossibile trovare il PDB 'vc100.pdb' con 'SOIL.lib(stb_image_aug.obj)' o in 'C:\Users\Rootx86\Desktop\Computer Graphics\Cendipede\Centipede\Debug\vc100.pdb'; oggetto collegato senza informazioni di debug
-  Basic2D.vcxproj -> C:\Users\Rootx86\Desktop\Computer Graphics\Cendipede\Centipede\Debug\Basic2D.exe
+  Basic2D.vcxproj -> C:\Users\Rootx86\Desktop\Computer Graphics\Atari-Centipede-OpenGL-master\Debug\Basic2D.exe
