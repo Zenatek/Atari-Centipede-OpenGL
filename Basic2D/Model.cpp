@@ -177,11 +177,11 @@ bool MyModel::DrawGLScene(void)
 //  The cursor "hot spot" is the center of the rectangle
 // glDisable(GL_TEXTURE_2D);
 
-  glTranslatef(ClientX2World(cx), ClientY2World(cy), 0);
+  glTranslatef(ClientX2World(cx), ClientY2World(cy), 0);				//AGGIORNA MATRICE POSIZIONE
   // proportional scaling (fixed percentual of window dimension)
   // if(1) proportional, if(0) fixed
   if (1) glScalef(0.20f, 0.20f, 0.20f);    // 1- scale the ship
-  //  Fixed scaling, alwais 100 pixels width/height
+   //  Fixed scaling, alwais 100 pixels width/height
   else {
 	  float dx = PixToCoord_X(100);
 	  float dy = PixToCoord_Y(100);

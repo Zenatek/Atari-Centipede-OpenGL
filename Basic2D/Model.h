@@ -88,7 +88,7 @@ public:
 	ship.push_back(Vertex( 0.25,-0.25,-5,1,0));
 	ship.push_back(Vertex( 0.25, 0.25,-5,1,1));
 	ship.push_back(Vertex(-0.25, 0.25,-5,0,1));
-
+	//cursor dimension
 	curs.clear();
 	curs.push_back(Vertex(-0.25, -0.25, -5, 0, 0));
 	curs.push_back(Vertex(0.25, -0.25, -5, 1, 0));

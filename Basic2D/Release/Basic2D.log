@@ -1,4 +1,6 @@
 ﻿  Model.cpp
+  main.cpp
+c:\users\rootx86\desktop\computer graphics\atari-centipede-opengl-master\basic2d\main.cpp(176): warning C4838: la conversione da 'int' a 'BYTE' richiede una conversione verso un tipo di dati più piccolo
 SOIL.lib(SOIL.obj) : warning LNK4075: '/EDITANDCONTINUE' ignorato a causa della specifica di '/OPT:ICF'
 LINK : warning LNK4098: la libreria predefinita 'MSVCRTD' è in conflitto con l'utilizzo di altre librerie; usare /NODEFAULTLIB:libreria
   Generazione codice in corso...

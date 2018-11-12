@@ -245,14 +245,33 @@ LRESULT CALLBACK WndProc(	HWND	hWnd,			// Handle For This Window
 
 		case WM_MOUSEMOVE:
 		{
+			RECT rt;								//PER DETERMINARE LIMITI FINESTRA
+			GetClientRect(hWnd, &rt);
+
 			POINTS p;
 			p = MAKEPOINTS(lParam);
-			Data.cx = p.x; Data.cy = p.y;
+			Data.cx = p.x; Data.cy = rt.bottom - 20;
 			if (Data.IsInClient(p.x, p.y)) {
-				if (!Data.captured) { Data.captured = true; SetCapture(hWnd); ShowCursor(FALSE); }
+				if (!Data.captured) { 
+					Data.captured = true;
+					SetCapture(hWnd);
+					ShowCursor(FALSE);
+
+				}
 			}
 			else {
-				if (Data.captured) { Data.captured = false; ReleaseCapture(); ShowCursor(TRUE); }
+				if (Data.captured) { 
+					Data.captured = false;
+					ReleaseCapture();
+					ShowCursor(TRUE);
+														//MOVIMENTO LIMITI FINESTRA CURSORE
+					if (Data.cx + 20 >= rt.right) {
+						Data.cx = rt.right - 20;
+					}
+					if (Data.cx - 20 <= rt.left) {
+						Data.cx = rt.left + 20;
+					}
+				}
 			}
 		}
 		break;
