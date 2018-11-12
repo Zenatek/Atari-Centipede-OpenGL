@@ -1,0 +1,5 @@
+﻿  Model.cpp
+  main.cpp
+c:\users\rootx86\desktop\computer graphics\cendipede\basic2d_1\basic2d\main.cpp(176): warning C4838: la conversione da 'int' a 'BYTE' richiede una conversione verso un tipo di dati più piccolo
+  Generazione del codice in corso...
+  Basic2D.vcxproj -> C:\Users\Rootx86\Desktop\Computer Graphics\Cendipede\Basic2D_1\Debug\Basic2D.exe
